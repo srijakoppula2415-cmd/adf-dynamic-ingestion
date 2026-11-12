@@ -130,17 +130,10 @@
 							],
 							"userProperties": [],
 							"typeProperties": {
-								"ifTrueActivities": [
-									{
-										"name": "Wait1",
-										"type": "Wait",
-										"dependsOn": [],
-										"userProperties": [],
-										"typeProperties": {
-											"waitTimeInSeconds": 1
-										}
-									}
-								]
+								"expression": {
+									"value": "@q",
+									"type": "Expression"
+								}
 							}
 						}
 					]
