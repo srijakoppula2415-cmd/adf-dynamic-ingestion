@@ -108,7 +108,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@q",
+									"value": "@equals(1,1)",
 									"type": "Expression"
 								},
 								"ifTrueActivities": [
