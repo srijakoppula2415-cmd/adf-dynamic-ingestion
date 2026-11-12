@@ -6,10 +6,10 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"d_folder": {
+			"p_folder": {
 				"type": "string"
 			},
-			"d_file": {
+			"p_file": {
 				"type": "string"
 			}
 		},
@@ -19,11 +19,11 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@dataset().d_file",
+					"value": "@dataset().p_file",
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@dataset().d_folder",
+					"value": "@dataset().p_folder",
 					"type": "Expression"
 				},
 				"fileSystem": "source"
