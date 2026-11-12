@@ -59,29 +59,6 @@
 					"isSequential": false,
 					"activities": [
 						{
-							"name": "Execute_child_pipeline",
-							"type": "ExecutePipeline",
-							"dependsOn": [],
-							"policy": {
-								"secureInput": false
-							},
-							"userProperties": [],
-							"typeProperties": {
-								"pipeline": {
-									"referenceName": "pl_processing_single_file",
-									"type": "PipelineReference"
-								},
-								"waitOnCompletion": true,
-								"parameters": {
-									"p_folder": "incoming",
-									"p_file": {
-										"value": "@item().name",
-										"type": "Expression"
-									}
-								}
-							}
-						},
-						{
 							"name": "Get_File_Last_Modified",
 							"type": "GetMetadata",
 							"dependsOn": [],
@@ -133,7 +110,32 @@
 								"expression": {
 									"value": "@q",
 									"type": "Expression"
-								}
+								},
+								"ifTrueActivities": [
+									{
+										"name": "Execute_child_pipeline",
+										"type": "ExecutePipeline",
+										"dependsOn": [],
+										"policy": {
+											"secureInput": false
+										},
+										"userProperties": [],
+										"typeProperties": {
+											"pipeline": {
+												"referenceName": "pl_processing_single_file",
+												"type": "PipelineReference"
+											},
+											"waitOnCompletion": true,
+											"parameters": {
+												"p_folder": "incoming",
+												"p_file": {
+													"value": "@item().name",
+													"type": "Expression"
+												}
+											}
+										}
+									}
+								]
 							}
 						}
 					]
