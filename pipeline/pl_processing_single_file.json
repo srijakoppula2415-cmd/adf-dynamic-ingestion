@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "dynamic_copy",
+				"name": "dynamic_copy21",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
