@@ -66,7 +66,17 @@
 				"outputs": [
 					{
 						"referenceName": "ds_sink_csv",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"p_folder": {
+								"value": "@split(pipeline().parameters.p_file,'.')[0]",
+								"type": "Expression"
+							},
+							"p_file": {
+								"value": "@pipeline().parameters.p_file",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
