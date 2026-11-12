@@ -1,0 +1,15 @@
+{
+	"name": "adf-dynamic-ingestion",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a83c75d7-282e-4434-a249-d5230a27a934",
+		"tenantId": "d71d8f30-fc88-498b-999d-b5fd9cda258c"
+	}
+}
