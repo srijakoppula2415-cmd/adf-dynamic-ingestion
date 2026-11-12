@@ -1,0 +1,44 @@
+{
+	"name": "ds_source_folder",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_storage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "incoming",
+				"fileSystem": "source"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "attendance_id",
+				"type": "String"
+			},
+			{
+				"name": "employee_id",
+				"type": "String"
+			},
+			{
+				"name": "attendance_date",
+				"type": "String"
+			},
+			{
+				"name": "status",
+				"type": "String"
+			},
+			{
+				"name": "hours_worked",
+				"type": "String"
+			}
+		]
+	}
+}
